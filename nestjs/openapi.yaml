@@ -1,0 +1,155 @@
+---
+openapi: 3.0.0
+info:
+  title: Tasks
+  description: The tasks API description
+  version: '1.0'
+  contact: {}
+tags:
+- name: tasks
+  description: ''
+servers: []
+components:
+  schemas:
+    CreateTaskDto:
+      type: object
+      properties:
+        title:
+          type: string
+          description: The title of the task
+          minLength: 3
+          maxLength: 30
+          default: This is a fake title
+        description:
+          type: string
+          description: The description of the task
+          minLength: 0
+          maxLength: 200
+          default: This is a fake description
+      required:
+      - title
+      - description
+    TaskDto:
+      type: object
+      properties:
+        id:
+          type: number
+          description: The ID of the task
+          default: This is a fake ID
+        title:
+          type: string
+          description: The title of the task
+          minLength: 3
+          maxLength: 30
+          default: This is a fake title
+        description:
+          type: string
+          description: The description of the task
+          minLength: 0
+          maxLength: 200
+          default: This is a fake description
+      required:
+      - id
+      - title
+      - description
+    UpdateTaskDto:
+      type: object
+      properties:
+        title:
+          type: string
+          description: The title of the task
+          minLength: 3
+          maxLength: 30
+          default: This is a fake title
+        description:
+          type: string
+          description: The description of the task
+          minLength: 0
+          maxLength: 200
+          default: This is a fake description
+      required:
+      - title
+      - description
+paths:
+  "/":
+    get:
+      operationId: AppController_getHello
+      parameters: []
+      responses:
+        '200':
+          description: ''
+  "/tasks":
+    post:
+      operationId: TasksController_create
+      parameters: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              "$ref": "#/components/schemas/CreateTaskDto"
+      responses:
+        '201':
+          description: ''
+      tags:
+      - tasks
+    get:
+      operationId: TasksController_findAll
+      parameters: []
+      responses:
+        '200':
+          description: ''
+      tags:
+      - tasks
+  "/tasks/{id}":
+    get:
+      operationId: TasksController_findOne
+      parameters:
+      - name: id
+        required: true
+        in: path
+        schema:
+          type: string
+      responses:
+        '200':
+          description: The task has been successfully found.
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/TaskDto"
+        '404':
+          description: Couldn't find the task
+      tags:
+      - tasks
+    put:
+      operationId: TasksController_update
+      parameters:
+      - name: id
+        required: true
+        in: path
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              "$ref": "#/components/schemas/UpdateTaskDto"
+      responses:
+        '200':
+          description: ''
+      tags:
+      - tasks
+    delete:
+      operationId: TasksController_remove
+      parameters:
+      - name: id
+        required: true
+        in: path
+        schema:
+          type: string
+      responses:
+        '200':
+          description: ''
+      tags:
+      - tasks
