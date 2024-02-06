@@ -13,7 +13,6 @@
     "@types/react-dom": "^16.9.10",
     "axios": "^0.27.2",
     "hello-tom-rapini-demo": "^1.0.8",
-    "open-api-yml-rapini-tom": "^1.0.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-scripts": "^5.0.1",

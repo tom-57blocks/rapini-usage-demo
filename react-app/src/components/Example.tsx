@@ -1,16 +1,16 @@
 import { initialize } from "hello-tom-rapini-demo";
-import axiosInstance  from  "../rapini/axios-instance";
+// import axiosInstance  from  "../rapini/axios-instance";
 
 export default function Example() {
 
-  const config = initialize(axiosInstance);
-  const { useTasksControllerFindOne } = config.queries;
+  // const config = initialize(axiosInstance);
+  // const { useTasksControllerFindOne } = config.queries;
 
-  const id = "fake id";
-  const { isLoading, isError, data } = useTasksControllerFindOne(`${id}`);
+  // const id = "fake id";
+  // const { isLoading, isError, data } = useTasksControllerFindOne(`${id}`);
 
-  if (isLoading) return <div>Loading...</div>;
-  if (isError) return <div>An error has occurred</div>;
-  return <div>Test {data?.title}</div>
+  // if (isLoading) return <div>Loading...</div>;
+  // if (isError) return <div>An error has occurred</div>;
+  // return <div>Test {data?.title}</div>
 
 }
