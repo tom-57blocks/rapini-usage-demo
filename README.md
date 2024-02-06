@@ -88,7 +88,7 @@ npm run start
 ```
 
 While the application is running, open your browser and navigate to [http://localhost:3000/api](http://localhost:3000/api). You should see the Swagger UI.
-![Screenshot 2024-02-05 at 23.11.45.png](https://cdn.nlark.com/yuque/0/2024/png/12511545/1707145950707-8668db90-d80f-4b8d-8948-319842a2b741.png#averageHue=%23f7ead8&clientId=u5ef93e7f-2cb5-4&from=ui&id=u1bab47e2&originHeight=1170&originWidth=2830&originalType=binary&ratio=2&rotation=0&showTitle=false&size=145702&status=done&style=none&taskId=u935bbdea-3585-4534-8810-6cd27208684&title=)
+![Screenshot 2024-02-05 at 23.11.45.png](./img/hello-tom-rapini-demo.png)
 As you can see, the SwaggerModule automatically reflects all of your endpoints.
 And in the swagger-open-api.yaml, you will see the OpenAPI yaml document as below:
 ![openapi_ymal.png](https://cdn.nlark.com/yuque/0/2024/png/12511545/1707183073104-ae9d5f21-5434-4469-960d-62c060db81b8.png#averageHue=%23212120&clientId=u5ef93e7f-2cb5-4&from=ui&height=467&id=u900c2882&originHeight=908&originWidth=936&originalType=binary&ratio=2&rotation=0&showTitle=false&size=146416&status=done&style=none&taskId=u54529422-85d6-4cdc-b191-a4029b1fbce&title=&width=481)
@@ -167,6 +167,7 @@ npm install @tanstack/react-query@4.36.1
 ```
 The version of axios and @tanstack/react-query must be consistent with the version of axios  and @tanstack/react-query in the package of hello-tom-rapini-demo shown as below:
 ![hello-tom-rapini-demo.png](https://cdn.nlark.com/yuque/0/2024/png/12511545/1707189119707-f77b89e6-cf51-45fb-a794-f4a3b4733a05.png#averageHue=%2323201f&clientId=u5ef93e7f-2cb5-4&from=ui&height=215&id=u0c922129&originHeight=235&originWidth=528&originalType=binary&ratio=2&rotation=0&showTitle=false&size=37982&status=done&style=none&taskId=uc140eb44-c733-4e41-b73d-1124966cefa&title=&width=484)
+
 insert the script into the packages shown as below:
 ```typescript
 
