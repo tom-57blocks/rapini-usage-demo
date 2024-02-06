@@ -19,7 +19,11 @@
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "test:e2e": "jest --config ./test/jest-e2e.json",
-    "generate:sdk":"npx rapini react-query v4 -p ./with-extensions.yaml -n hello-tom-rapini-demo -pv 1.0.2 -o hello-tom-rapini-demo && cd hello-tom-rapini-demo && npm install && npm run build && npm config set @tom:registry https://registry.npmjs.org && npm publish && mv hello-tom-rapini-demo"
+    "rapini:react-query": "npx rapini react-query v4 -p ./swagger-open-api.yaml -n hello-tom-rapini-demo -pv 1.0.8 -o hello-tom-rapini-demo",
+    "generate:react-query-bundle": "cd hello-tom-rapini-demo && npm install && npm run build",
+    "pulish:react-query-bundle": "npm config set @tom:registry https://registry.npmjs.org && npm publish",
+    "remove:react-query-bundle":"cd .. && mv -f ./hello-tom-rapini-demo ../",
+    "generate:sdk":"npm run rapini:react-query && npm run generate:react-query-bundle && npm run pulish:react-query-bundle && npm run remove:react-query-bundle"
   },
   "dependencies": {
     "@nestjs/common": "^7.5.1",

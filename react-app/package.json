@@ -12,7 +12,7 @@
     "@types/react": "^16.14.2",
     "@types/react-dom": "^16.9.10",
     "axios": "^0.27.2",
-    "hello-tom-rapini-demo": "^1.0.2",
+    "hello-tom-rapini-demo": "^1.0.8",
     "open-api-yml-rapini-tom": "^1.0.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
@@ -24,7 +24,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "update:sdk": "npm update hello-tom-rapini-demo --save"
   },
   "eslintConfig": {
     "extends": [
