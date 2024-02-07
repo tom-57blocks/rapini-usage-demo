@@ -88,7 +88,9 @@ npm run start
 ```
 
 While the application is running, open your browser and navigate to [http://localhost:3000/api](http://localhost:3000/api). You should see the Swagger UI.
+
 ![Screenshot 2024-02-05 at 23.11.45.png](./img/hello-tom-rapini-demo.png)
+
 As you can see, the SwaggerModule automatically reflects all of your endpoints.
 And in the swagger-open-api.yaml, you will see the OpenAPI yaml document as below:
 ![openapi_ymal.png](https://cdn.nlark.com/yuque/0/2024/png/12511545/1707183073104-ae9d5f21-5434-4469-960d-62c060db81b8.png#averageHue=%23212120&clientId=u5ef93e7f-2cb5-4&from=ui&height=467&id=u900c2882&originHeight=908&originWidth=936&originalType=binary&ratio=2&rotation=0&showTitle=false&size=146416&status=done&style=none&taskId=u54529422-85d6-4cdc-b191-a4029b1fbce&title=&width=481)
