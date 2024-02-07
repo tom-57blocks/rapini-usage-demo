@@ -104,10 +104,10 @@ In the package.json of your Nestjs Project shown as below,  you can modify the s
 ```typescript
 "scripts": {
     ...
-    "rapini:react-query": "npx rapini react-query v4 -p ./swagger-open-api.yaml -n hello-tom-rapini-demo -pv 1.0.8 -o hello-tom-rapini-demo",
+    "rapini:react-query": "npx rapini react-query v4 -pv 1.0.11 -p ./swagger-open-api.yaml -n hello-tom-rapini-demo -o hello-tom-rapini-demo",
     "generate:react-query-bundle": "cd hello-tom-rapini-demo && npm install && npm run build",
-    "pulish:react-query-bundle": "npm config set @tom:registry https://registry.npmjs.org && npm publish",
-    "remove:react-query-bundle":"cd .. && mv -f ./hello-tom-rapini-demo ../",
+    "pulish:react-query-bundle": "cd hello-tom-rapini-demo && npm config set @tom:registry https://registry.npmjs.org && npm publish",
+    "remove:react-query-bundle":"mv -f ./hello-tom-rapini-demo ../",
     "generate:sdk":"npm run rapini:react-query && npm run generate:react-query-bundle && npm run pulish:react-query-bundle && npm run remove:react-query-bundle"
   },
 ```
@@ -138,14 +138,14 @@ The script of generate:react-query-bundle:
 To publish, you must be a user of the npm registry. If you have a user account of the npm registry you publish packge to, use npm login to access your account from your ternimal.
 The script of "pulish:react-query-bundle":
 ```typescript
-"pulish:react-query-bundle": "npm config set @tom:registry https://registry.npmjs.org && npm publish",
+"pulish:react-query-bundle": "cd hello-tom-rapini-demo && npm config set @tom:registry https://registry.npmjs.org && npm publish",
   // npm config set @tom:registry https://registry.npmjs.org, config the registry you publish package to
   // npm publish, publish a package to your npm registry
 ```
 
 The script of "remove:react-query-bundle",
 ```typescript
-"remove:react-query-bundle":"cd .. && mv -f ./hello-tom-rapini-demo ../",
+"remove:react-query-bundle":"mv -f ./hello-tom-rapini-demo ../",
   // cd .., back to project directory,
   // cd .. && mv -f ./hello-tom-rapini-demo ../, move the react-query-bundle package from the project directory
 ```
